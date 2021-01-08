@@ -284,7 +284,7 @@ footer {
             
             <div placeholder="Select Type of Advice" value="default" id="form-1_F_694_PENSION_ADVICE_TYPE2_SELECT" >
     <div class="input">
-        <select id="form_F_694_PENSION_ADVICE_TYPE2_SELECT" name="F_694_PENSION_ADVICE_TYPE2_SELECT" placeholder="Select Type of Advice">
+        <select id="PENSION_ADVICE_TYPE2_SELECT" name="PENSION_ADVICE_TYPE2_SELECT" placeholder="Select Type of Advice">
             <option value="" disabled selected >Select the type of advice you need</option>
             <option value="Pensions &amp; Retirement" >Pensions & Retirement</option>
             <option value="Final Salary / Defined Benefit Pension" >Final Salary / Defined Benefit Pension</option>
@@ -294,30 +294,31 @@ footer {
 </div>
             <div >
     <div class="input">
-        <input type="text" id="form_F_11_POSTCODE" name="F_11_POSTCODE" placeholder="Postcode"  value="">
+        <input type="text" id="postcode" name="postcode" placeholder="Postcode"  value="">
         <div class="error-message"></div>
     </div>
 </div>
-						<input  type="hidden" id="form_F_166_MATCHTYPE" name="F_166_MATCHTYPE" value="">
-						<input  type="hidden" id="form_F_167_CAMPAIGNID" name="F_167_CAMPAIGNID" value="">
-						<input  type="hidden" id="form_F_168_ADGROUPID" name="F_168_ADGROUPID" value="">
-						<input  type="hidden" id="form_F_169_NETWORK" name="F_169_NETWORK" value="">
-						<input  type="hidden" id="form_F_170_DEVICE" name="F_170_DEVICE" value="">
-						<input  type="hidden" id="form_F_171_DEVICEMODEL" name="F_171_DEVICEMODEL" value="">
-						<input  type="hidden" id="form_F_172_CREATIVE" name="F_172_CREATIVE" value="">
-						<input  type="hidden" id="form_F_173_KEYWORD" name="F_173_KEYWORD" value="">
-						<input  type="hidden" id="form_F_174_ADPOSITION" name="F_174_ADPOSITION" value="">
-						<input  type="hidden" id="form_F_175_GCLID" name="F_175_GCLID" value="">
-						<input  type="hidden" id="form_F_199_PAGE" name="F_199_PAGE" value="">	
-						<input  type="hidden" id="form_F_397_SITEID" name="F_397_SITEID" value="">	
-						<input  type="hidden" id="form_F_1024_FEEDITEMID" name="F_1024_FEEDITEMID" value="">	
-						<input  type="hidden" id="form_F_1025_TARGETID" name="F_1025_TARGETID" value="">	
-						<input  type="hidden" id="form_F_1026_LOC_PHYSICAL_MS" name="F_1026_LOC_PHYSICAL_MS" value="">	
-						<input  type="hidden" id="form_F_1027_LOC_INTEREST_MS" name="F_1027_LOC_INTEREST_MS" value="">	
-                        			<input type="hidden" name="F_100_FINANCIAL_ADVICE_TYPE" id="form_F_100_FINANCIAL_ADVICE_TYPE" >
-						<input type="hidden" name="F_232_ASSOCIATEDSITE" id="form_F_232_ASSOCIATEDSITE" data-field="F_232_ASSOCIATEDSITE" value="www.pensionadvisers.co.uk/" >
-							
-						<button class="submitBtn" type="button" title="Submit" id="next1">Submit</button>
+                
+				<input type="hidden" id="pl_matchtype" name="pl_matchtype" value="">
+			    	<input type="hidden" id="pl_campaignid" name="pl_campaignid" value="">
+				<input type="hidden" id="pl_adgroupid" name="pl_adgroupid" value="">
+				<input type="hidden" id="pl_network" name="pl_network" value="">
+				<input type="hidden" id="pl_device" name="pl_device" value="">
+				<input type="hidden" id="pl_devicemodel" name="pl_devicemodel" value="">
+				<input type="hidden" id="pl_creative" name="pl_creative" value="">
+				<input type="hidden" id="pl_keyword" name="pl_keyword" value="">
+				<input type="hidden" id="pl_adposition" name="pl_adposition" value="">
+				<input type="hidden" id="gclid" name="gclid" value="">
+				<input type="hidden" id="pl_page" name="pl_page" value="">	
+				<input type="hidden" id="pl_feeditemid" name="pl_feeditemid" value="">	
+				<input type="hidden" id="pl_targetid" name="pl_targetid" value="">	
+				<input type="hidden" id="pl_loc_physical_ms" name="pl_loc_physical_ms" value="">	
+				<input type="hidden" id="pl_loc_interest_ms" name="pl_loc_interest_ms" value="">	
+
+				<input type="hidden" name="pl_siteid" id="pl_siteid" value="19932">
+				<input type="hidden" name="pl_associatedsite" id="pl_associatedsite" value="www.pensionadvisers.co.uk/">
+				<input type="hidden" name="pl_leadgroupid" id="pl_leadgroupid" value="51530">	
+				<button class="submitBtn" type="button" title="Submit" id="next1">Submit</button>
 					</fieldset>
 
 					<fieldset id="step2" data-db-page-field-owner-id="5454">
@@ -341,7 +342,7 @@ footer {
 					</h1></fieldset>
 
 
-					<fieldset id="step3" data-db-page-field-owner-id="5454">
+					<fieldset id="step3">
 						<h5>We Use Your Personal Information In Order To Deal With Your Request. We Will Never Send Your Details To Any Companies
 							Other Than The Financial Advisor We Recommend For You
 						</h5>
@@ -349,25 +350,25 @@ footer {
 						<h5>Please Enter Your Details Below</h5>
 						<div>
     <div class="input">
-        <input type="text" id="form_F_3_FIRSTNAME" name="F_3_FIRSTNAME" placeholder="First Name" value="">
+        <input type="text" id="firstname" name="firstname" placeholder="First Name" value="">
         <div class="error-message"></div>
     </div>
 </div>
 						<div>
     <div class="input">
-        <input type="text" id="form_F_4_LASTNAME" name="F_4_LASTNAME" placeholder="Last Name" value="">
+        <input type="text" id="lastname" name="lastname" placeholder="Last Name" value="">
         <div class="error-message"></div>
     </div>
 </div>
 						<div>
     <div class="input">
-        <input type="text" id="form_F_1_EMAIL" name="F_1_EMAIL" placeholder="Email" value="">
+        <input type="text" id="email" name="email" placeholder="Email" value="">
         <div class="error-message"></div>
     </div>
 </div>
 						<div>
     <div class="input">
-        <input type="text" id="form_F_12_PHONE1" name="F_12_PHONE1" placeholder="Phone" value="">
+        <input type="text" id="phone" name="phone" placeholder="Phone" value="">
         <div class="error-message"></div>
     </div>
 </div>
