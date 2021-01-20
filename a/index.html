@@ -11,8 +11,24 @@
 <script src="../assets/jquery.min.js" type="text/javascript"></script>
 <script src="../assets/bootstrap.min.js" type="text/javascript"></script>
 <link href="../assets/bootstrap.min.css" media="screen" type="text/css" rel="stylesheet">
+<script src="../assets/crafty_postcode.class.js" type="text/javascript"></script>
 
-</script><style type="text/css">
+<script>
+    $(document).ready(function () {
+       var cp_obj = CraftyPostcodeCreate();
+       cp_obj.set("access_token", "a56e9-d1528-33c0e-06573"); // your token here
+       cp_obj.set("result_elem_id", "crafty_postcode_result_display");
+       cp_obj.set("form", "pension-advisers.co.uk");
+       cp_obj.set("elem_street1"  , "address1");
+       cp_obj.set("elem_street2"  , "address2");
+       cp_obj.set("elem_street3"  , "address3");
+       cp_obj.set("elem_town"     , "town");
+       cp_obj.set("elem_postcode" , "postcode");
+    });
+
+</script>
+
+<style type="text/css">
 
 .marketing {
     
@@ -100,6 +116,15 @@ body {
     text-align: center;
     font-size: 1.4em;
     padding: 0.2em;
+}
+
+
+.addressbutton {
+    line-height: normal!important;
+    height: 2.5em!important;
+    border-radius: 0.3em!important;
+    border-style: none!important;
+    margin: 10px 0 10px 0px!important;
 }
 
 input {
@@ -293,10 +318,24 @@ footer {
     </div>
 </div>
             <div >
-    <div class="input">
-        <input type="text" id="postcode" name="postcode" placeholder="Postcode"  value="">
+    <div class="col-12 input d-flex flex-row ">
+        <div class="col-sm-9">
+            <input class="" type="text" id="postcode" name="postcode" placeholder="Postcode"  value="AA11AA">
+        </div>
+        <div class="col-sm-3 ml-0 pl-0 pr-0"> 
+            <button class="addressbutton " type="button" onclick="cp_obj.doLookup()">
+            <img src="../assets/img/search.svg" class="m-1" style="width: 30px; height: 30px; ">
+            </button><br/>
+        </div>
+         
         <div class="error-message"></div>
     </div>
+     <span style="font-size:small">Use the free postcodes  AA11AA, AA11AB, AA11AD or AA11AE.</span><br/>  
+    <div>
+        <span id="crafty_postcode_result_display"> </span>
+    </div>
+
+
 </div>
                 
 				<input type="hidden" id="pl_matchtype" name="pl_matchtype" value="">
@@ -337,7 +376,7 @@ footer {
         <div class="error-message"></div>
     </div>
 </div>
-
+                        
 						<button class="submitBtn" type="button" title="Select my Pension Provider" id="next2">Submit</button>
 					</h1></fieldset>
 
@@ -372,8 +411,8 @@ footer {
         <div class="error-message"></div>
     </div>
 </div>
-						<input class="submitBtn" type="submit" title="Select my Pension Provider" value="Select my Pension Provider">
-					</fieldset>
+		<input class="submitBtn" type="submit" title="Select my Pension Provider" value="Select my Pension Provider">
+	</fieldset>
 
 
         </form>
@@ -548,6 +587,9 @@ $(document).ready(function () {
     $("*[name='pl_loc_interest_ms']").val(pl_loc_interest_ms).trigger('change');
 
 });
+
+
+
 
 
 $(document).ready(function () {
