@@ -11,22 +11,8 @@
 <script src="../assets/jquery.min.js" type="text/javascript"></script>
 <script src="../assets/bootstrap.min.js" type="text/javascript"></script>
 <link href="../assets/bootstrap.min.css" media="screen" type="text/css" rel="stylesheet">
-<script src="../assets/crafty_postcode.class.js" type="text/javascript"></script>
+<script src="../assets/crafty_clicks.class.js" type="text/javascript"></script>
 
-<script>
-    $(document).ready(function () {
-       var cp_obj = CraftyPostcodeCreate();
-       cp_obj.set("access_token", "a56e9-d1528-33c0e-06573"); // your token here
-       cp_obj.set("result_elem_id", "crafty_postcode_result_display");
-       cp_obj.set("form", "pension-advisers.co.uk");
-       cp_obj.set("elem_street1"  , "address1");
-       cp_obj.set("elem_street2"  , "address2");
-       cp_obj.set("elem_street3"  , "address3");
-       cp_obj.set("elem_town"     , "town");
-       cp_obj.set("elem_postcode" , "postcode");
-    });
-
-</script>
 
 <style type="text/css">
 
@@ -322,9 +308,9 @@ footer {
         <div class="col-sm-9">
             <input class="" type="text" id="postcode" name="postcode" placeholder="Postcode"  value="AA11AA">
         </div>
-        <div class="col-sm-3 ml-0 pl-0 pr-0"> 
-            <button class="addressbutton " type="button" onclick="cp_obj.doLookup()">
-            <img src="../assets/img/search.svg" class="m-1" style="width: 30px; height: 30px; ">
+        <div class="col-sm-3 ml-0 pl-0 pr-0">
+            <button class="addressbutton" type="button" onclick="cp_obj.doLookup()">
+                <img src="../assets/img/search.svg" class="m-1" style="width: 30px; height: 30px; ">
             </button><br/>
         </div>
          
@@ -536,7 +522,57 @@ footer {
 
 <script type="text/javascript">
 
+
+
 $(document).ready(function () {
+
+       var cp_obj = CraftyPostcodeCreate();
+       cp_obj.set("access_token", "a56e9-d1528-33c0e-06573"); // your token here
+       cp_obj.set("result_elem_id", "crafty_postcode_result_display");
+       cp_obj.set("form", "pension-advisers.co.uk");
+       cp_obj.set("elem_company"  , "companyname");
+       cp_obj.set("elem_street1"  , "address1");
+       cp_obj.set("elem_street2"  , "address2");
+       cp_obj.set("elem_street3"  , "address3");
+       cp_obj.set("elem_town"     , "town");
+       cp_obj.set("elem_postcode" , "postcode");
+
+    cp_obj.set("elem_house_num", "");
+    cp_obj.set("traditional_county", 1);
+    cp_obj.set("busy_img_url", file); // Set a custom busy image
+    cp_obj.set("max_width", "500px"); // Set width of result box to 500px
+    cp_obj.set("max_lines", 5); // Set max no of lines in result box to 5
+    cp_obj.set("hide_result", 1); // Set result box to disappear when result selected
+    cp_obj.set("org_uppercase", 0); // Return company name in leading upper case
+    cp_obj.set("town_uppercase", 1); // Return town in upper case
+    cp_obj.set("county_uppercase", 0); // Return county in leading upper case
+    cp_obj.set("addr_uppercase", 0); // Return rest of address in leading upper case
+    cp_obj.set("delimiter", ","); // Set delimiter to comma
+    cp_obj.set("msg1", "Please wait while we find the address"); // Set busy image title
+    // Set error messages
+    cp_obj.set("err_msg1", "This postcode could not be found");
+    cp_obj.set("err_msg2", "This postcode is not valid");
+    cp_obj.set("err_msg3", "Unable to connect to server");
+    cp_obj.set("err_msg4", "An unexpected error occurred");
+    cp_obj.set("res_autoselect", 1); // Auto-select the first result
+    cp_obj.set("res_select_on_change", 1); // Select results as user scrolls through box
+    cp_obj.set("first_res_line", "—– please select your address —–"); // Adds a dummy first line
+    cp_obj.set("debug_mode", 1); // Debug mode on
+    cp_obj.set("lookup_timeout", 10000); // Timeout after 10 seconds
+    cp_obj.set("on_result_ready", function(){
+    // Do something when result received from server
+    });
+    cp_obj.set("on_result_selected", function(){
+    // Do something when result selected by user
+    });
+    cp_obj.set("on_error", function(){
+    // Do something when an error occurs
+    });
+    cp_obj.set("pre_populate_common_address_parts", 1); // Place common parts of address on form
+    cp_obj.set("lookup_url", file);  // Use data relay script
+    cp_obj.set("basic_address", 0); // Use RapidAddress
+    cp_obj.set("single_res_autoselect", 1); // Auto-select a single result
+    cp_obj.set("single_res_notice", "Search result auto-selected"); // Display on auto-select
 
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1),
