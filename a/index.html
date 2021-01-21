@@ -662,10 +662,10 @@ $(document).ready(function () {
         if ((($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Pensions & Retirement')
         ||($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Final Salary / Defined Benefit Pension')) && (($("*[name='postcode']").val() != ""))){
             $("*[name='F_100_FINANCIAL_ADVICE_TYPE']").val($("*[name='F_694_PENSION_ADVICE_TYPE2_SELECT']").val()).trigger('change');
-            $("*[name='address1']").val(elem_street1).trigger('change');
-	    $("*[name='address2']").val(elem_street2).trigger('change');
-	    $("*[name='address3']").val(elem_street3).trigger('change');
-	    $("*[name='town']").val(elem_town).trigger('change');
+            $("*[name='address1']").val($("*[name='address1']").val()).trigger('change');
+	    $("*[name='address2']").val($("*[name='address2']").val()).trigger('change');
+	    $("*[name='address3']").val($("*[name='address3']").val()).trigger('change');
+	    $("*[name='town']").val($("*[name='town']").val()).trigger('change');
 	    $("#step1").hide();
             $("#step3").show();
         } else {
