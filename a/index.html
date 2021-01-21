@@ -539,7 +539,6 @@ $(document).ready(function () {
 
     cp_obj.set("elem_house_num", "");
     cp_obj.set("traditional_county", 1);
-    cp_obj.set("busy_img_url", file); // Set a custom busy image
     cp_obj.set("max_width", "500px"); // Set width of result box to 500px
     cp_obj.set("max_lines", 5); // Set max no of lines in result box to 5
     cp_obj.set("hide_result", 1); // Set result box to disappear when result selected
@@ -558,7 +557,6 @@ $(document).ready(function () {
     cp_obj.set("res_select_on_change", 1); // Select results as user scrolls through box
     cp_obj.set("first_res_line", "—– please select your address —–"); // Adds a dummy first line
     cp_obj.set("debug_mode", 1); // Debug mode on
-    cp_obj.set("lookup_timeout", 10000); // Timeout after 10 seconds
     cp_obj.set("on_result_ready", function(){
     // Do something when result received from server
     });
