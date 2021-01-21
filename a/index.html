@@ -140,7 +140,7 @@ select {
 }
 	
 .next1Btn{
-    display: none;
+    display: block;
     width: 100%!important;
     margin-top: 1em;
     height: 2.5em;
@@ -651,8 +651,8 @@ $(document).ready(function () {
     $("#step2").hide();
     $("#step3").hide();
     $("#next1").click(function () {
-        if (($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Pensions & Retirement')
-        ||($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Final Salary / Defined Benefit Pension')){
+        if ((($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Pensions & Retirement')
+        ||($('#form-1_F_694_PENSION_ADVICE_TYPE2_SELECT :selected').text() == 'Final Salary / Defined Benefit Pension')) && (($("*[name='postcode']").val() != ""))){
             $("#step1").hide();
             $("#step3").show();
             $("*[name='F_100_FINANCIAL_ADVICE_TYPE']").val($("*[name='F_694_PENSION_ADVICE_TYPE2_SELECT']").val()).trigger('change');
