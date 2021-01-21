@@ -138,7 +138,20 @@ select {
     margin: 10px 0 10px 0px!important;
     color: initial;
 }
-
+	
+.next1Btn{
+    display: none;
+    width: 100%!important;
+    margin-top: 1em;
+    height: 2.5em;
+    border-radius: 0.3em;
+    border-style: none;
+    color: white;
+    background-color: #42CCAD;
+    font-size: 1.2em;
+    -webkit-appearance: none;
+}
+	
 .submitBtn{
     width: 100%!important;
     margin-top: 1em;
@@ -309,10 +322,10 @@ footer {
 </div>
             <div >
     <div class="col-12 input d-flex flex-row ">
-        <div class="col-sm-9">
+        <div class="col-10 col-sm-10">
             <input class="" type="text" id="postcode" name="postcode" placeholder="Postcode"  value="AA11AA">
         </div>
-        <div class="col-sm-3 ml-0 pl-0 pr-0">
+        <div class="col-2 col-sm-2 ml-0 pl-0 pr-0">
             <button id="address-button" class="addressbutton" type="button" >
                 <img src="../assets/img/search.svg" class="m-1" style="width: 30px; height: 30px; ">
             </button><br/>
@@ -354,7 +367,7 @@ footer {
 				<input type="hidden" name="pl_siteid" id="pl_siteid" value="19277">
 				<input type="hidden" name="pl_associatedsite" id="pl_associatedsite" value="www.pensionadvisers.co.uk/a/">
 				<input type="hidden" name="pl_leadgroupid" id="pl_leadgroupid" value="51530">	
-				<button class="submitBtn" type="button" title="Submit" id="next1">Submit</button>
+				<button id="next1" class="next1Btn" type="button" title="Submit" id="next1">Submit</button>
 					</fieldset>
 
 					<fieldset id="step2" data-db-page-field-owner-id="5454">
@@ -664,7 +677,7 @@ $(document).ready(function () {
     $('#address-button').click(function() {
         cp_obj.doLookup();
         $("#address_display").show();
-
+        $("#next1").show();
     });
 	
 });
