@@ -116,6 +116,11 @@ body {
 .address_display {
     display: none;
 }
+	
+.error-message {
+    display: none;
+    color: red;
+}
 
 input {
     line-height: normal!important;
@@ -367,6 +372,9 @@ footer {
 				<input type="hidden" name="pl_siteid" id="pl_siteid" value="19277">
 				<input type="hidden" name="pl_associatedsite" id="pl_associatedsite" value="www.pensionadvisers.co.uk/a/">
 				<input type="hidden" name="pl_leadgroupid" id="pl_leadgroupid" value="51530">	
+						
+				<div id="error1" name="error1" class="error-message" >These fields are required</div>
+						
 				<button id="next1" class="next1Btn" type="button" title="Submit" id="next1">Submit</button>
 					</fieldset>
 
@@ -658,7 +666,7 @@ $(document).ready(function () {
             $("*[name='F_100_FINANCIAL_ADVICE_TYPE']").val($("*[name='F_694_PENSION_ADVICE_TYPE2_SELECT']").val()).trigger('change');
             
         } else {
-            alert('Please select a type of advice.');
+            $("#error1").show();
         }
     });
     $("#next2").click(function () {
