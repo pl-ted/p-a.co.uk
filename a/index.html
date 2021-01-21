@@ -112,6 +112,10 @@ body {
     border-style: none!important;
     margin: 10px 0 10px 0px!important;
 }
+	
+.address_display {
+    display: none;
+}
 
 input {
     line-height: normal!important;
@@ -309,7 +313,7 @@ footer {
             <input class="" type="text" id="postcode" name="postcode" placeholder="Postcode"  value="AA11AA">
         </div>
         <div class="col-sm-3 ml-0 pl-0 pr-0">
-            <button class="addressbutton" type="button" onclick="cp_obj.doLookup()">
+            <button id="address-button" class="addressbutton" type="button" >
                 <img src="../assets/img/search.svg" class="m-1" style="width: 30px; height: 30px; ">
             </button><br/>
         </div>
@@ -320,7 +324,14 @@ footer {
     <div>
         <span id="crafty_postcode_result_display"> </span>
     </div>
-
+    <div id="address_display" class="address_display">
+       Address:<br/>
+       <input type="text" name="address1"  /><br/>
+       <input type="text" name="address2"/><br/>
+       <input type="text" name="address3"/><br/>
+       Town:<br/>
+       <input type="text" name="town"/><br/>
+    </div>
 
 </div>
                 
@@ -649,6 +660,13 @@ $(document).ready(function () {
             alert('Please select a type of advice.');
         }
     });
+	
+    $('#address-button').click(function() {
+        cp_obj.doLookup();
+        $("#address_display").show();
+
+    });
+	
 });
 
 
