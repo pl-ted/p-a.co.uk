@@ -522,10 +522,6 @@ footer {
 
 <script type="text/javascript">
 
-
-
-$(document).ready(function () {
-
        var cp_obj = CraftyPostcodeCreate();
        cp_obj.set("access_token", "a56e9-d1528-33c0e-06573"); // your token here
        cp_obj.set("result_elem_id", "crafty_postcode_result_display");
@@ -570,6 +566,8 @@ $(document).ready(function () {
     cp_obj.set("basic_address", 0); // Use RapidAddress
     cp_obj.set("single_res_autoselect", 1); // Auto-select a single result
     cp_obj.set("single_res_notice", "Search result auto-selected"); // Display on auto-select
+
+$(document).ready(function () {
 
     var getUrlParameter = function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1),
