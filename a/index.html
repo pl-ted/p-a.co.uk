@@ -678,7 +678,7 @@ $(document).ready(function () {
 	    $("*[name='address2']").val($("*[name='address2']").val()).trigger('change');
 	    $("*[name='address3']").val($("*[name='address3']").val()).trigger('change');
 	    $("*[name='town']").val($("*[name='town']").val()).trigger('change');
-
+            $("#step1").hide();
             $("#step3").show();
         } else {
             $("#error1").show();
